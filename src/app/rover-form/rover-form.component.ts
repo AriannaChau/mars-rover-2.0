@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { MarsRoverApiPhotos } from '../mars-rover-api-photos.service';
+import { PhotoService } from '../photo.service';
 
 @Component({
   selector: 'app-rover-form',
   templateUrl: './rover-form.component.html',
   styleUrls: ['./rover-form.component.css'],
-  providers: [ MarsRoverApiPhotos ]
+  providers: [ MarsRoverApiPhotos, PhotoService ]
 })
 export class RoverFormComponent implements OnInit {
   photos: any[] = null;
